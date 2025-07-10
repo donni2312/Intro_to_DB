@@ -1,7 +1,3 @@
--- A script that prints the full description of the table `Books`
--- from the database `alx_book_store`.
--- The database name will be passed as an argument to the mysql command.
--- You are not allowed to use the DESCRIBE or EXPLAIN statements.
 
 SELECT
     COLUMN_NAME,
