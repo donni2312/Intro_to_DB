@@ -8,23 +8,22 @@ properly closed.
 """
 
 import mysql.connector
-from mysql.connector import Error
 
 conn = None
 cursor = None
 
 try:
-    # TODO: Replace 'your_username' and 'your_password' with your MySQL credentials
+    # NOTE: Replace 'your_username' and 'your_password' with your MySQL credentials
     conn = mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="#@Sue-Mary-Anne_07042003"
+        user="your_username",
+        password="your_password"
     )
     cursor = conn.cursor()
     cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
     print("Database 'alx_book_store' created successfully!")
 
-except Error as e:
+except mysql.connector.Error as e:
     print(f"Error: {e}")
 
 finally:
